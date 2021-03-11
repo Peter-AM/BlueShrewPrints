@@ -586,6 +586,14 @@ footer i{
 	.bar{
 	width: 18%;
 	}
+	    
+	.tagline{
+		padding: 200px 0 0 0;
+	    }
+	    
+	.heading{
+		padding-top: 50px;
+	    }
 
 }
 

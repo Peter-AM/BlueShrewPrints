@@ -85,7 +85,8 @@ h2{
 .logo{
 	width: 70%;
 	display: inline-block;
-	font-size: 8px;
+	font-size: 14px;
+	padding-top: 10px;
 }
 
 .logo a{

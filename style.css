@@ -578,6 +578,17 @@ footer i{
 
 }
 
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+
+	.bar{
+	width: 18%;
+	}
+
+}
+
 @media (min-width: 1024px) {
 
 

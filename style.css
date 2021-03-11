@@ -109,7 +109,7 @@ h2{
 .bar{
 	float: right;
 	width: 20%;
-	display: inline-block;
+	display: block;
 	padding-top: 10px;
 }
 

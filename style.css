@@ -31,10 +31,6 @@ body {
   overflow: auto;
 }
 
-:root:before {
-  content: url("./IMG/*.png")
-}
-
 footer{
 	font-size: 14px;
 	padding: 0 30px 20px 30px;

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blue Shrew Prints</title>
+	<meta name="description" content="Linocut prints made by Andrea Raffai">
+	<meta name="keywords" content="linocut, prints, handmade, art, contemporary">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+	
+</head>
+<body>
+	<header>
+		
+<!-- NAV -->
+
+		<div class="logo">
+			<a href="./index.html">
+			<h1>BLUE SHREW PRlNTS</h1>
+			</a>
+		</div>
+		<div class="bar">
+		<nav>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<div id="navLinks">
+			    <a href="./portfolio.html">PORTFOLlO</a>
+			    <a href="./about.html">ABOUT</a>
+			    <a href="./contact.html">CONTACT</a>
+			    <a href="./shop.html">SHOP</a>
+  			</div>
+		</nav>
+		</div>
+		<div class="logo2">
+			<a href="./index.html">
+			<h1>BLUE SHREW PRlNTS</h1>
+			</a>
+		</div>
+		<div class="bar2">
+		<nav>
+			<div id="navLinks2">
+			    <a href="./shop.html">SHOP</a>
+			    <a href="./contact.html">CONTACT</a>
+			    <a href="./about.html">ABOUT</a>
+			    <a href="./portfolio.html">PORTFOLlO</a>
+  			</div>
+
+		</nav>
+		</div>
+
+	</header>
+
+	<section id="contact">
+
+			<h1 class="heading">
+				Contact
+			</h1>
+			<hr>
+			<form id="form" onsubmit="return validForm()" method="post">
+			
+					<input type="text" class="small" id="name" name="name" placeholder="NAME">
+					<input type="text" class="small" id="mail" name="mail" placeholder="EMAlL">
+					<textarea class="small" id="message" name="message" placeholder="MESSAGE"></textarea>
+
+					<input type="submit" id="submit" class="button" value="Submit">
+				
+			</form>
+		
+			<h2>
+				Schedule
+			</h2>
+			<hr>
+			<p>
+				
+				Custom artwork commissions are currently unavailable, due to other design projects but I'm available to 
+				discuss future orders, feel free to get in touch!<br><br>
+			
+			</p>
+
+			<h2>
+				Location
+			</h2>
+			<hr>
+
+			<p> Blue Shrew Prints is a small business located in Aberdeen, Scotland.
+			Please support your local businesses if you can in such a time of uncertainty!
+			</p>
+
+			<div id="mapid">
+			</div>
+		
+
+
+	</section>
+
+	<footer>
+		&copy; Blue Shrew Prints
+			<div id="social">
+			<a href="https://www.facebook.com/TheBlueShrew" target="_blank"><i class="fa fa-facebook-square"></i></a>
+			<a href="https://www.instagram.com/theblueshrew" target="_blank"><i class="fa fa-instagram"></i></a>
+			<a href="https://www.youtube.com/channel/UCjPksI8dxlvdfoHy33ZhzMQ" target="_blank"><i class="fa fa-youtube"></i></a>
+			</div>
+	</footer>
+
+<!-- NAV Display switch -->
+
+	<script>
+				function myFunction() {
+		  var x = document.getElementById("navLinks");
+		  if (x.style.display === "block") {
+		    x.style.display = "none";
+		  } else {
+		    x.style.display = "block";
+		  }
+		}
+	</script>
+
+	<script>
+		
+		function validForm() {
+		  var x = document.forms["form"]["name"].value;
+		  var z = document.forms["form"]["mail"].value;
+		  var y = document.forms["form"]["message"].value;
+		  if (x == "") {
+		    alert("Please fill out the 'Name' field before sending your message");
+		    return false;
+		  }
+		  else if (z == ""){
+		  	alert("Please fill out the 'Email' field before sending your message");
+		  	return false;
+		  }
+		  else if (y == ""){
+		  	alert("Please fill out the 'Message' field before sending your message");
+		  	return false;
+		  }
+		}
+
+
+	</script>
+
+	<script> 57.1478, -2.0912
+
+			var mymap = L.map('mapid').setView([57.1478, -2.0912], 13);
+			var marker = L.marker([57.1478, -2.0912]).addTo(mymap);
+
+			marker.bindPopup("<b>BLUE SHREW PRINTS</b>").openPopup();
+			L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+			    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			    maxZoom: 18,
+			    id: 'mapbox/streets-v11',
+			    tileSize: 512,
+			    zoomOffset: -1,
+			    accessToken: 'pk.eyJ1IjoiYW11aGVsIiwiYSI6ImNrbTRzNjU5aDA3aHkyb253bWNucGIxdncifQ.lbJkpFKIjm85eF4y8t2g8w'
+			}).addTo(mymap);
+
+	</script>
+
+
+
+
+</body>
+</html>
